@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Lápidas</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-title">
+                <img src="logo.png" alt="Logo Marmolería" class="logo">
+                <span class="brand-name">Marmolería Señor de Muruhuay</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#models">Modelos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hub" class="hub-section fade-in">
+            <div class="hub-content">
+                <h1>Bienvenido a Marmolería Señor de Muruhuay</h1>
+                <p>
+                    Somos una empresa peruana con años de experiencia en la elaboración de lápidas y trabajos en mármol, granito y piedra. Nos especializamos en ofrecer productos de alta calidad, personalizados y con acabados profesionales para honrar la memoria de sus seres queridos.
+                </p>
+                <ul class="hub-list">
+                    <li>Modelos exclusivos y personalizados</li>
+                    <li>Materiales de primera calidad: granito, mármol y piedra</li>
+                    <li>Asesoría y atención personalizada</li>
+                    <li>Entrega puntual y garantía en cada trabajo</li>
+                </ul>
+                <p>
+                    Descubre nuestros modelos y encuentra la opción ideal para tu necesidad. Si tienes alguna consulta, no dudes en <a href="#contact" class="hub-link">contactarnos</a>.
+                </p>
+            </div>
+        </section>
+
+        <section id="models">
+            <h2 class="models-title">Modelos de Lápidas</h2>
+            <div id="filters-bar">
+                <div class="filter-group">
+                    <label for="material">
+                        <span class="filter-icon">⛼</span>
+                        Material
+                    </label>
+                    <select id="material"></select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">
+                        <span class="filter-icon">💰</span>
+                        Precio
+                    </label>
+                    <select id="price-range">
+                        <option value="all">Todos</option>
+                        <option value="0-1000">Hasta S/ 1000</option>
+                        <option value="1001-1500">S/ 1001 - S/ 1500</option>
+                        <option value="1501-2000">S/ 1501 - S/ 2000</option>
+                        <option value="2001-99999">Más de S/ 2000</option>
+                    </select>
+                </div>
+            </div>
+            <div id="model-list"></div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in">
+            <h2>Contacto</h2>
+            <p>
+                Si te interesa alguno de nuestros modelos o deseas un diseño personalizado, puedes comunicarte con nosotros directamente por WhatsApp o visitarnos en nuestra tienda física. Estaremos encantados de asesorarte y ayudarte a encontrar la mejor opción.
+            </p>
+            <div class="contact-actions">
+                <a class="whatsapp-btn" href="https://wa.me/51900432978" target="_blank" rel="noopener">
+                    WhatsApp: 900-432-978
+                </a>
+                <a class="whatsapp-btn" href="https://wa.me/51935817987" target="_blank" rel="noopener">
+                    WhatsApp: 935-817-987
+                </a>
+                <div class="store-info">
+                    <strong>Visítanos:</strong><br>
+                    Jr. Ejemplo 123, Lima, Perú<br>
+                    <span style="color:#b6b6b6;">(Lunes a Domingo, 7am - 6pm)</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Señor de Muruhuay. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Modelo ampliado">
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
