@@ -1,23 +1,51 @@
-// This file contains the JavaScript code for the gravestone shop webpage.
-// It handles the functionality for selecting gravestone materials, displaying corresponding images,
-// and managing the display of model details such as price and material.
-
 let models = [];
+let sections = [];
+
+async function loadSections() {
+  const response = await fetch('data/sections.json');
+  sections = await response.json();
+}
 
 async function loadModels() {
   const response = await fetch('data/models.json');
   models = await response.json();
 }
 
-function populateMaterialOptions() {
-  const materialSelect = document.getElementById("material");
-  materialSelect.innerHTML = `<option value="all">Todos</option>`;
-  const materiales = [...new Set(models.map(m => m.material))];
-  materiales.forEach(mat => {
-    const option = document.createElement("option");
-    option.value = mat;
-    option.textContent = mat.charAt(0).toUpperCase() + mat.slice(1);
-    materialSelect.appendChild(option);
+function createSection({ id, title, filters }) {
+  const container = document.getElementById('sections-container');
+  const section = document.createElement('section');
+  section.id = id;
+  section.innerHTML = `
+    <h2 class="${id}-title models-title">${title}</h2>
+    <div id="filters-bar-${id}" class="filters-bar-lapidas">
+      ${filters.map(f => `
+        <div class="filter-group">
+          <label for="${f.id}">${f.label}</label>
+          <select id="${f.id}"></select>
+        </div>
+      `).join('')}
+    </div>
+    <div id="model-list-${id}"></div>
+    <div id="pagination-${id}" class="pagination"></div>
+  `;
+  container.appendChild(section);
+}
+
+function populateDynamicOptions(section) {
+  section.filters.forEach(f => {
+    const select = document.getElementById(f.id);
+    if (f.dynamic) {
+      select.innerHTML = `<option value="all">Todos</option>`;
+      const values = [...new Set(models.filter(m => m.categoria === section.categoria).map(m => m.material))];
+      values.forEach(val => {
+        const option = document.createElement("option");
+        option.value = val;
+        option.textContent = val.charAt(0).toUpperCase() + val.slice(1);
+        select.appendChild(option);
+      });
+    } else if (f.options) {
+      select.innerHTML = f.options.map(opt => `<option value="${opt.value}">${opt.text}</option>`).join('');
+    }
   });
 }
 
@@ -51,7 +79,6 @@ function addLightboxEvents() {
     document.getElementById('lightbox-img').src = "";
   };
 
-  // Cerrar lightbox al hacer click fuera de la imagen
   document.getElementById('lightbox').onclick = function(e) {
     if (e.target === this) {
       this.classList.remove('active');
@@ -60,53 +87,97 @@ function addLightboxEvents() {
   };
 }
 
-// Llama a esta función después de renderizar los modelos
-function updateModels() {
-  const material = document.getElementById("material").value;
-  const priceRange = document.getElementById("price-range").value;
-  const modelList = document.getElementById("model-list");
-  modelList.innerHTML = "";
+function renderPaginatedList(items, containerId, paginationId, pageSize = 9) {
+  let currentPage = 1;
+  const container = document.getElementById(containerId);
+  const pagination = document.getElementById(paginationId);
 
-  let filtered = models;
+  function renderPage(page) {
+    container.innerHTML = '';
+    const start = (page - 1) * pageSize;
+    const end = start + pageSize;
+    const pageItems = items.slice(start, end);
 
-  if (material !== "all") {
-    filtered = filtered.filter(m => m.material === material);
-  }
+    // Centrado si solo hay un modelo
+    if (pageItems.length === 1) {
+      container.classList.add('model-list-single');
+    } else {
+      container.classList.remove('model-list-single');
+    }
 
-  if (priceRange !== "all") {
-    const [min, max] = priceRange.split("-").map(Number);
-    filtered = filtered.filter(m => m.precio >= min && m.precio <= max);
-  }
-
-  if (filtered.length === 0) {
-    modelList.innerHTML = "<p>No hay modelos disponibles para este filtro.</p>";
-    return;
-  }
-
-  filtered.forEach(model => {
-    const card = document.createElement("div");
-    card.className = "model-gallery-item fade-in";
-    card.innerHTML = `
-      <img src="${model.imagen}" alt="${model.nombre}">
-      <div class="model-info">
-        <hr>
-        <div class="model-title">${model.nombre}</div>
-        <div class="model-meta">
-          <span class="model-material">${model.material.charAt(0).toUpperCase() + model.material.slice(1)}</span>
-          <span class="model-price">S/ ${model.precio}</span>
+    pageItems.forEach(model => {
+      const card = document.createElement("div");
+      card.className = "model-gallery-item fade-in";
+      card.innerHTML = `
+        <img src="${model.imagen}" alt="${model.nombre}">
+        <div class="model-info">
+          <hr>
+          <div class="model-title">${model.nombre}</div>
+          <div class="model-meta">
+            <span class="model-material">${model.material ? model.material.charAt(0).toUpperCase() + model.material.slice(1) : ''}</span>
+            <span class="model-price">${model.precio ? 'S/ ' + model.precio : ''}</span>
+          </div>
         </div>
-      </div>
-    `;
-    modelList.appendChild(card);
+      `;
+      container.appendChild(card);
+    });
+    animateOnScroll();
+    addLightboxEvents();
+  }
+
+  function renderPagination() {
+    pagination.innerHTML = '';
+    const pageCount = Math.ceil(items.length / pageSize);
+    for (let i = 1; i <= pageCount; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      if (i === currentPage) btn.classList.add('active');
+      btn.onclick = () => {
+        currentPage = i;
+        renderPage(currentPage);
+        renderPagination();
+      };
+      pagination.appendChild(btn);
+    }
+  }
+
+  renderPage(currentPage);
+  renderPagination();
+}
+
+function getFilterValues(section) {
+  const values = {};
+  section.filters.forEach(f => {
+    values[f.id] = document.getElementById(f.id).value;
   });
-  animateOnScroll();
-  addLightboxEvents();
+  return values;
+}
+
+function filterAndPaginateSection(section) {
+  let filtered = models.filter(m => m.categoria === section.categoria);
+  section.filters.forEach(f => {
+    const value = document.getElementById(f.id).value;
+    if (value !== "all") {
+      if (f.id.startsWith("price-range")) {
+        const [min, max] = value.split("-").map(Number);
+        filtered = filtered.filter(m => m.precio >= min && m.precio <= max);
+      } else {
+        filtered = filtered.filter(m => m[f.id.replace(/-.+/, '')] === value);
+      }
+    }
+  });
+  renderPaginatedList(filtered, `model-list-${section.id}`, `pagination-${section.id}`);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  await loadSections();
   await loadModels();
-  populateMaterialOptions();
-  updateModels();
-  document.getElementById("material").addEventListener("change", updateModels);
-  document.getElementById("price-range").addEventListener("change", updateModels);
+  sections.forEach(section => {
+    createSection(section);
+    populateDynamicOptions(section);
+    filterAndPaginateSection(section);
+    section.filters.forEach(f => {
+      document.getElementById(f.id).addEventListener("change", () => filterAndPaginateSection(section));
+    });
+  });
 });

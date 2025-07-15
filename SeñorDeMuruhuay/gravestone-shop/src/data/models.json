@@ -1,13 +1,42 @@
 [
   {
-    "nombre": "Clásica Granito",
+    "nombre": "tumba Simple Granito",
+    "categoria": "tumba",
+    "tipo": "simple",
     "material": "granito",
-    "precio": 1200,
-    "descripcion": "Lápida de granito clásico, resistente y elegante.",
+    "precio": 1800,
+    "descripcion": "tumba simple de granito, resistente y elegante.",
     "imagen": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
   },
   {
+    "nombre": "tumba Doble Mármol",
+    "categoria": "tumba",
+    "tipo": "doble",
+    "material": "mármol",
+    "precio": 3200,
+    "descripcion": "tumba doble en mármol blanco, acabado brillante.",
+    "imagen": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+  },
+   {
+    "nombre": "tumba Doble Mármol",
+    "categoria": "tumba",
+    "tipo": "doble",
+    "material": "mármol",
+    "precio": 3200,
+    "descripcion": "tumba doble en mármol blanco, acabado brillante.",
+    "imagen": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+  "nombre": "Moderna Granito",
+  "categoria": "lapida",
+  "material": "granito",
+  "precio": 1500,
+  "descripcion": "Diseño moderno en granito pulido.",
+  "imagen": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+},
+  {
     "nombre": "Moderna Granito",
+      "categoria": "lapida",
     "material": "granito",
     "precio": 1500,
     "descripcion": "Diseño moderno en granito pulido.",
@@ -15,6 +44,7 @@
   },
   {
     "nombre": "Clásica Mármol",
+      "categoria": "lapida",
     "material": "mármol",
     "precio": 1800,
     "descripcion": "Lápida de mármol blanco, acabado brillante.",
@@ -22,6 +52,7 @@
   },
   {
     "nombre": "Elegante Mármol",
+      "categoria": "lapida",
     "material": "mármol",
     "precio": 2100,
     "descripcion": "Mármol premium con detalles tallados.",
@@ -29,10 +60,35 @@
   },
   {
     "nombre": "Natural Piedra",
+      "categoria": "lapida",
     "material": "piedra",
     "precio": 900,
     "descripcion": "Lápida de piedra natural, aspecto rústico.",
     "imagen": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "nombre": "Rústica Piedra",
+      "categoria": "lapida",
+    "material": "piedra",
+    "precio": 1100,
+    "descripcion": "Piedra tallada a mano, diseño tradicional.",
+    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "nombre": "Rústica Piedra",
+      "categoria": "lapida",
+    "material": "piedra",
+    "precio": 1100,
+    "descripcion": "Piedra tallada a mano, diseño tradicional.",
+    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "nombre": "Rústica Piedra",
+      "categoria": "lapida",
+    "material": "piedra",
+    "precio": 1100,
+    "descripcion": "Piedra tallada a mano, diseño tradicional.",
+    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
   },
   {
     "nombre": "Rústica Piedra",
@@ -41,40 +97,39 @@
     "descripcion": "Piedra tallada a mano, diseño tradicional.",
     "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
   },
-{
+  {
     "nombre": "Rústica Piedra",
+      "categoria": "lapida",
     "material": "piedra",
     "precio": 1100,
     "descripcion": "Piedra tallada a mano, diseño tradicional.",
     "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
   },
-    {
+  {
     "nombre": "Rústica Piedra",
+      "categoria": "lapida",
     "material": "piedra",
     "precio": 1100,
     "descripcion": "Piedra tallada a mano, diseño tradicional.",
     "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
   },
-    {
-    "nombre": "Rústica Piedra",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  },
-    {
-    "nombre": "Rústica Piedra",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  },
-    {
-    "nombre": "Rústica Piedra",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  }
+   {
+  "nombre": "Foto Familiar",
+  "categoria": "foto",
+  "tipo": "familiar",
+  "material": "piedra",
+  "precio": 1100,
+  "descripcion": "Foto familiar en piedra.",
+  "imagen": "..."
+},
+   {
+  "nombre": "Foto Familiar",
+  "categoria": "páginas",
+  "tipo": "familiar",
+  "material": "piedra",
+  "precio": 1100,
+  "descripcion": "Foto familiar en piedra.",
+  "imagen": "..."
+}
 
 ]
