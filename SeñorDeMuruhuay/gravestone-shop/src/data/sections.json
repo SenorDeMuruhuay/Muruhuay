@@ -62,9 +62,8 @@
         "label": "Tipo",
         "options": [
           { "value": "all", "text": "Todos" },
-          { "value": "familiar", "text": "Familiar" },
-          { "value": "individual", "text": "Individual" },
-          { "value": "grupo", "text": "Grupo" }
+          { "value": "Diseño", "text": "Diseño" },
+          { "value": "Restauracion", "text": "Restauracion" }
         ]
       },
       {
@@ -72,9 +71,7 @@
         "label": "Precio",
         "options": [
           { "value": "all", "text": "Todos" },
-          { "value": "0-2000", "text": "Hasta S/ 2000" },
-          { "value": "2001-5000", "text": "S/ 2001 - S/ 5000" },
-          { "value": "5001-99999", "text": "Más de S/ 5000" }
+          { "value": "0-10", "text": "Hasta S/ 10" }
         ]
       }
     ]
@@ -89,9 +86,7 @@
         "label": "Tipo",
         "options": [
           { "value": "all", "text": "Todos" },
-          { "value": "familiar", "text": "Familiar" },
-          { "value": "individual", "text": "Individual" },
-          { "value": "grupo", "text": "Grupo" }
+          { "value": "biografia", "text": "biografia" }
         ]
       },
       {
@@ -99,9 +94,7 @@
         "label": "Precio",
         "options": [
           { "value": "all", "text": "Todos" },
-          { "value": "0-2000", "text": "Hasta S/ 2000" },
-          { "value": "2001-5000", "text": "S/ 2001 - S/ 5000" },
-          { "value": "5001-99999", "text": "Más de S/ 5000" }
+          { "value": "0-10", "text": "Hasta S/ 10" }
         ]
       }
     ]

@@ -170,7 +170,8 @@ select:focus {
 #model-list,
 #model-list-lapidas,
 #model-list-tumbas,
-#model-list-Fotos {
+#model-list-Fotos,
+#model-list-Páginas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
