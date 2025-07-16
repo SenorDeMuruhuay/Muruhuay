@@ -1,5 +1,77 @@
 [
   {
+    "nombre": "porcelanato blanco",
+    "categoria": "lapida",
+    "material": "porcelanato",
+    "precio": 350,
+    "descripcion": "Lápida de porcelanato blanco, elegante y duradera.",
+    "imagen": "lapidas/porcelanato/350/lapida1.png"
+  },
+  {
+    "nombre": "porcelanato blanco y negro",
+    "categoria": "lapida",
+    "material": "porcelanato",
+    "precio": 350,
+    "descripcion": "Lápida de porcelanato blanco y negro, elegante y duradera.",
+    "imagen": "lapidas/porcelanato/350/lapida2.png"
+  },
+  {
+    "nombre": "porcelanato negro",
+    "categoria": "lapida",
+    "material": "porcelanato",
+    "precio": 350,
+    "descripcion": "Lápida de porcelanato negro, elegante y duradera.",
+    "imagen": "lapidas/porcelanato/350/lapida3.png"
+  },
+  {
+    "nombre": "porcelanato guindo rojizo",
+    "categoria": "lapida",
+    "material": "porcelanato",
+    "precio": 350,
+    "descripcion": "Lápida de porcelanato guindo rojizo, duradero y moderno",
+    "imagen": "lapidas/porcelanato/350/lapida4.png"
+  },
+  {
+    "nombre": "granito blanco",
+    "categoria": "lapida",
+    "material": "granito",
+    "precio": 600,
+    "descripcion": "Lápida de granito blanco, duradero y moderno",
+    "imagen": "lapidas/granito/600/lapida1.png"
+  },
+  {
+    "nombre": "granito guindo",
+    "categoria": "lapida",
+    "material": "granito",
+    "precio": 600,
+    "descripcion": "Lápida de granito guindo, preferible, duradero y moderno",
+    "imagen": "lapidas/granito/600/lapida2.png"
+  },
+  {
+    "nombre": "granito blanco",
+    "categoria": "lapida",
+    "material": "granito",
+    "precio": 600,
+    "descripcion": "Lápida de granito, preferible, duradero y moderno",
+    "imagen": "lapidas/granito/600/lapida3.png"
+  },
+  {
+    "nombre": "cuarzo blanco",
+    "categoria": "lapida",
+    "material": "cuarzo",
+    "precio": 600,
+    "descripcion": "Lápida de cuarzo, preferible, duradero y moderno",
+    "imagen": "lapidas/cuarzo/600/lapida1.png"
+  },
+  {
+    "nombre": "cuarzo blanco-modelo 2",
+    "categoria": "lapida",
+    "material": "cuarzo",
+    "precio": 600,
+    "descripcion": "Lápida de cuarzo, preferible, duradero y moderno",
+    "imagen": "lapidas/cuarzo/600/lapida2.png"
+  },
+  {
     "nombre": "tumba Simple Granito",
     "categoria": "tumba",
     "tipo": "simple",
@@ -27,87 +99,7 @@
     "imagen": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
   },
   {
-  "nombre": "Moderna Granito",
-  "categoria": "lapida",
-  "material": "granito",
-  "precio": 1500,
-  "descripcion": "Diseño moderno en granito pulido.",
-  "imagen": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
-},
-  {
-    "nombre": "Moderna Granito",
-      "categoria": "lapida",
-    "material": "granito",
-    "precio": 1500,
-    "descripcion": "Diseño moderno en granito pulido.",
-    "imagen": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Clásica Mármol",
-      "categoria": "lapida",
-    "material": "mármol",
-    "precio": 1800,
-    "descripcion": "Lápida de mármol blanco, acabado brillante.",
-    "imagen": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Elegante Mármol",
-      "categoria": "lapida",
-    "material": "mármol",
-    "precio": 2100,
-    "descripcion": "Mármol premium con detalles tallados.",
-    "imagen": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Natural Piedra",
-      "categoria": "lapida",
-    "material": "piedra",
-    "precio": 900,
-    "descripcion": "Lápida de piedra natural, aspecto rústico.",
-    "imagen": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
-  },
-  {
     "nombre": "Rústica Piedra",
-      "categoria": "lapida",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Rústica Piedra",
-      "categoria": "lapida",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Rústica Piedra",
-      "categoria": "lapida",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Rústica Piedra",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Rústica Piedra",
-      "categoria": "lapida",
-    "material": "piedra",
-    "precio": 1100,
-    "descripcion": "Piedra tallada a mano, diseño tradicional.",
-    "imagen": "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    "nombre": "Rústica Piedra",
-      "categoria": "lapida",
     "material": "piedra",
     "precio": 1100,
     "descripcion": "Piedra tallada a mano, diseño tradicional.",
