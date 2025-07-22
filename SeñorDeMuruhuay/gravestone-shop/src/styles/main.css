@@ -369,7 +369,7 @@ footer {
 
 .lightbox-actions-panel {
   position: absolute;
-  top: 32px;
+  top: 470px;
   right: 32px;
   display: flex;
   flex-direction: column;
@@ -380,7 +380,7 @@ footer {
 
 @media (max-width: 600px) {
   .lightbox-actions-panel {
-    top: 550px !important; /* Ajusta según lo que necesites */
+    top: 560px !important; /* Ajusta según lo que necesites */
     right: 6px !important;
   }
 }
