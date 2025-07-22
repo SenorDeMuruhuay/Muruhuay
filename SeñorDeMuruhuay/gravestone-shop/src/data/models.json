@@ -1,20 +1,13 @@
 [
   {
-    "nombre": "porcelanato blanco",
+    "nombre": "porcelanato color hueso",
     "categoria": "lapida",
     "material": "porcelanato",
     "precio": 350,
-    "descripcion": "Lápida de porcelanato blanco, elegante y duradera.",
+    "descripcion": "Lápida de porcelanato hueso, elegante y duradera.",
     "imagen": "lapidas/porcelanato/350/lapida1.png"
   },
-  {
-    "nombre": "porcelanato blanco y negro",
-    "categoria": "lapida",
-    "material": "porcelanato",
-    "precio": 350,
-    "descripcion": "Lápida de porcelanato blanco y negro, elegante y duradera.",
-    "imagen": "lapidas/porcelanato/350/lapida2.png"
-  },
+
   {
     "nombre": "porcelanato negro",
     "categoria": "lapida",
@@ -24,11 +17,11 @@
     "imagen": "lapidas/porcelanato/350/lapida3.png"
   },
   {
-    "nombre": "porcelanato guindo rojizo",
+    "nombre": "porcelanato marron",
     "categoria": "lapida",
     "material": "porcelanato",
     "precio": 350,
-    "descripcion": "Lápida de porcelanato guindo rojizo, duradero y moderno",
+    "descripcion": "Lápida de porcelanato marron, duradero y moderno",
     "imagen": "lapidas/porcelanato/350/lapida4.png"
   },
   {
@@ -39,16 +32,24 @@
     "descripcion": "Lápida de granito blanco, duradero y moderno",
     "imagen": "lapidas/granito/600/lapida1.png"
   },
-  {
-    "nombre": "granito guindo",
+    {
+    "nombre": "granito negro y plomo",
     "categoria": "lapida",
     "material": "granito",
     "precio": 600,
-    "descripcion": "Lápida de granito guindo, preferible, duradero y moderno",
+    "descripcion": "Lápida de porcelanato blanco y negro, elegante y duradera.",
+    "imagen": "lapidas/porcelanato/350/lapida2.png"
+  },
+  {
+    "nombre": "granito melon",
+    "categoria": "lapida",
+    "material": "granito",
+    "precio": 600,
+    "descripcion": "Lápida de granito melon, preferible, duradero y moderno",
     "imagen": "lapidas/granito/600/lapida2.png"
   },
   {
-    "nombre": "granito blanco",
+    "nombre": "granito melon",
     "categoria": "lapida",
     "material": "granito",
     "precio": 600,
@@ -125,7 +126,7 @@
   "nombre": "Biografia-forma-libro",
   "categoria": "páginas",
   "tipo": "biografia",
-  "material": "libro(incluye musica)",
+  "material": "temática de libro(incluye musica)",
   "precio": 10,
   "descripcion": "Pagina en forma de libro.",
   "imagen": "pagina/pagina1.png"
@@ -134,7 +135,7 @@
   "nombre": "Biografia-elegante-cielo",
   "categoria": "páginas",
   "tipo": "biografia",
-  "material": "cielo(incluye musica)",
+  "material": "temática de cielo(incluye musica)",
   "precio": 10,
   "descripcion": "Foto familiar en piedra.",
   "imagen": "pagina/pagina2.png"

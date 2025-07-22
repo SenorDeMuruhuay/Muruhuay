@@ -22,36 +22,18 @@
       }
     ]
   },
-  {
-    "id": "tumbas",
-    "title": "Tumbas",
-    "categoria": "tumba",
-    "filters": [
-      {
-        "id": "tipo-tumba",
-        "label": "Tipo",
-        "options": [
-          { "value": "all", "text": "Todos" },
-          { "value": "simple", "text": "Simple" },
-          { "value": "economica", "text": "Económica" },
-          { "value": "doble", "text": "Doble" },
-          { "value": "familiar", "text": "Familiar" },
-          { "value": "personalizada", "text": "Personalizada" }
-        ]
-      },
-      {
-        "id": "price-range-tumbas",
-        "label": "Precio",
-        "options": [
-          { "value": "all", "text": "Todos" },
-          { "value": "0-1000", "text": "Hasta S/ 1000" },
-          { "value": "1001-1500", "text": "S/ 1001 - S/ 1500" },
-          { "value": "1501-2000", "text": "S/ 1501 - S/ 2000" },
-          { "value": "2001-99999", "text": "Más de S/ 2000" }
-        ]
-      }
-    ]
-  },
+ {
+  "id": "tumbas",
+  "title": "Tumbas",
+  "categoria": "tumba",
+  "filters": [],
+  "customText": "Háblenos para poder explicarle más sobre los modelos y precios de las tumbas.",
+  "imagenes": [
+    "tumba/tumba1.png",
+    "tumba/tumba2.png",
+    "tumba/tumba3.png"
+  ]
+},
   {
     "id": "Fotos",
     "title": "Fotos",

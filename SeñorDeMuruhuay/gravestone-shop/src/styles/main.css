@@ -484,7 +484,6 @@ footer {
 }
 
 #pagination-lapidas,
-#pagination-tumbas,
 #pagination-Fotos,
 #pagination-Páginas {
   display: flex;
@@ -494,7 +493,6 @@ footer {
 }
 
 #pagination-lapidas button,
-#pagination-tumbas button,
 #pagination-Fotos button,
 #pagination-Páginas button {
   background: #232526;
@@ -512,11 +510,9 @@ footer {
 }
 
 #pagination-lapidas button.active,
-#pagination-tumbas button.active,
 #pagination-Fotos button.active,
 #pagination-Páginas button.active,
 #pagination-lapidas button:hover,
-#pagination-tumbas button:hover,
 #pagination-Fotos button:hover,
 #pagination-Páginas button:hover {
   background: #4fc3f7;
@@ -539,9 +535,31 @@ footer {
   margin: 0 auto;
 }
 
+.section-info {
+  text-align: center;
+  color: #ffe136;
+  font-size: 1.2em;
+  margin-bottom: 2.5rem;
+}
+
+.tumbas-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.tumba-img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  border: 2px solid #232526;
+  background: #222;
+}
+
 @media (max-width: 800px) {
   #model-list-lapidas,
-  #model-list-tumbas,
   #model-list-Fotos,
   #model-list-Páginas {
     grid-template-columns: 1fr;
