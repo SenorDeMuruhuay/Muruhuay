@@ -594,3 +594,10 @@ footer {
     width: 40px;
   }
 }
+
+@media (max-width: 600px) {
+  #lightbox-actions > div {
+    top: 550px !important; /* Ajusta este valor según lo que necesites */
+    right: 6px !important;
+  }
+}
