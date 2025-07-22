@@ -367,6 +367,24 @@ footer {
   color: #ffd700;
 }
 
+.lightbox-actions-panel {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  align-items: flex-end;
+  z-index: 10001;
+}
+
+@media (max-width: 600px) {
+  .lightbox-actions-panel {
+    top: 550px !important; /* Ajusta según lo que necesites */
+    right: 6px !important;
+  }
+}
+
 .contact-section {
   background: linear-gradient(120deg, #232526 60%, #414345 100%);
   border-radius: 14px;
@@ -592,12 +610,5 @@ footer {
   .logo {
     height: 40px;
     width: 40px;
-  }
-}
-
-@media (max-width: 700px) {
-  #lightbox-actions > div {
-    top: 650px !important;
-    right: 6px !important;
   }
 }

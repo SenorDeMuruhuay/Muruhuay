@@ -94,7 +94,7 @@ function addLightboxEvents() {
       const lightboxActions = document.getElementById('lightbox-actions');
       lightboxImg.src = this.src;
       lightboxActions.innerHTML = `
-        <div style="display:flex; flex-direction:column; gap:0.7em; align-items:flex-end; position:absolute; top:470px; right:32px; z-index:10001;">
+        <div class="lightbox-actions-panel">
           <a href="${this.src}" download class="whatsapp-btn" style="padding:0.4em 1em; font-size:0.95em;">Descargar imagen</a>
           <a href="https://wa.me/${whatsappNumbers[0]}?text=${encodeURIComponent('Hola, quiero información sobre este modelo: ' + this.src)}" target="_blank" class="whatsapp-btn" style="padding:0.4em 1em; font-size:0.95em;">WhatsApp 1</a>
           <a href="https://wa.me/${whatsappNumbers[1]}?text=${encodeURIComponent('Hola, quiero información sobre este modelo: ' + this.src)}" target="_blank" class="whatsapp-btn" style="padding:0.4em 1em; font-size:0.95em;">WhatsApp 2</a>
